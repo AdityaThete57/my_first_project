@@ -1,0 +1,7 @@
+materials {
+    "Hydrogen" :{"atomic_number" : 1, "mass_number" : 2}
+    "Helium" : {"atomic_number" : 2, "mass_Number" : 4}
+    "Carbon" : {"atomic_number" : 6, "mass_number" : 12}
+}
+print(f'The atomic number for carbon is{materials[Helium]}')
+
