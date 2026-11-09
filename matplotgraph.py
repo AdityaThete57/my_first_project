@@ -2,10 +2,11 @@ import matplotlib.pyplot as plt
 import numpy as np
 x = [1, 2, 3, 4, 5]
 y = [2, 4, 6, 8, 10]
-plt.plot(x, y,'bo')#r-- means red dashed line, bo means blue circle, g means green line, etc
+plt.plot(x, y,'r--')#r-- means red dashed line, bo means blue circle, g means green line, etc
 plt.title('Simple Line Plot')
 plt.xlabel('X-axis')
 plt.ylabel('Y-axis')
+plt.axis([0, 6, 0, 12]) #set the x and y axis limits
 plt.show()
 t = np.linspace(0,100,5)
 print(t)#0,25,50,75,100
@@ -30,13 +31,13 @@ plt.plot(x, y, 'r--')
 plt.title('Projectile Motion')
 plt.xlabel('Distance (m)')
 plt.ylabel('Height (m)')
-plt.xlim(0, 10)
+plt.xlim(0, 10) 
 plt.ylim(0, 10)
 plt.axhline(0, color='blue', lw=0.5)  # Draw a horizontal line at y=0
 plt.axvline(0, color='black', lw=0.5)  # Draw a vertical line at x=0
-plt.show()
 plt.grid()
-plt.axis('equal')
+plt.axis('equal')#plt.axis('off') hides both axis entirely
 print(f"Time of flight: {t_flight:.2f} seconds")
 print(f"Maximum height: {y.max():.2f} meters")
 print(f"Range: {x[-1]:.2f} meters")
+plt.show()
